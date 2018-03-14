@@ -1,0 +1,95 @@
+body
+  font-weight: normal
+  font-family: Roboto
+  color: #161616
+  background: #e7ebf0
+
+#page-wrapper
+  display: flex
+  background: #fff
+  flex-grow: 1
+  width: 100%
+  flex-direction: column
+
+.container
+  max-width: 1000px
+  min-width: 1000px
+  padding: 0 10px
+  margin: auto
+
+.chat-window-outer
+  min-height: 500px
+  height: 100%
+  padding: 30px 0
+
+.chat-window
+  height: 100%
+  background: #fff
+  padding: 0
+  display: flex
+  flex-direction: column
+  box-shadow: 0 1px 1px rgba(97,127,152,.2), 1px 0 0 rgba(97,127,152,.1), -1px 0 0 rgba(97,127,152,.1)
+
+.boxed-form
+  width: 274px
+  margin: auto
+  .title
+    color: #222
+    margin: 0 0 20px
+    font-size: 16px
+    font-weight: 500
+  .subtext
+    color: #999
+    margin: 15px 0 30px
+    font-size: 12px
+    line-height: 160%
+    &:nth-last-child(1)
+      margin-bottom: 0
+    &:nth-child(1)
+      margin-top: 0
+  form
+    font-size: 13px
+    > *
+      margin: 14px 0px
+    input:not([type="checkbox"]):not([type="radio"]), textarea, select, button
+      color: #000
+      background: #fff
+      border: 0
+      padding: 7px 0
+      width: 100%
+      resize: none
+      border-top: 1px solid rgba(0,0,0,0)
+      border-bottom: 1px solid #ddd
+      &.error, & + label.error
+        animation: input-error 2s linear
+      &::placeholder, &::-webkit-placeholder
+        color: #666
+    button
+      cursor: pointer
+    .fl-ph
+      position: relative
+      padding: 6px 0
+      label
+        color: #666
+        position: absolute
+        top: 0
+        transform: translateY(-50%)
+        font-size: 11px
+        pointer-events: none
+        transition: font .1s linear, top .1s linear
+      input:invalid:not(:focus) + label
+        top: 50%
+        font-size: inherit
+
+a.link
+  color: #84a2bc
+  font-weight: 500
+  &:hover
+    text-decoration: underline
+
+@keyframes input-error
+  0%, 75%
+    color: #d00
+    border-bottom-color: #faa
+
+

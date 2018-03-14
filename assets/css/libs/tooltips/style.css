@@ -1,0 +1,102 @@
+.tooltip {
+    position: absolute;
+    z-index: 127;
+    transition: opacity 150ms ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+    font-size: 15px;
+}
+.tooltip.shown {
+    opacity: 1;
+    pointer-events: all;
+}
+.tooltip.tt-default {
+    padding: 12px 22px;
+    border-radius: 8px;
+    max-width: 350px;
+    word-wrap: break-word;
+}
+.tooltip.tt-default > * {
+    margin: 9px 0;
+}
+.tooltip.tt-default > .tooltip-title {
+    font-weight: normal;
+    font-size: 1em;
+}
+.tooltip.tt-default > .tooltip-text {
+    font-size: 0.86em;
+}
+.tooltip.tt-small {
+    padding: 0 8px;
+    font-size: 13px;
+}
+.tooltip.tt-top:before, .tooltip.tt-bottom:before, .tooltip.tt-top:after, .tooltip.tt-bottom:after {
+    content: '';
+    position: absolute;
+    border: 8px solid transparent;
+    width: 0;
+    height: 0;
+    content: '';
+}
+.tooltip.tt-top:before, .tooltip.tt-bottom:before {
+    z-index: 2;
+}
+.tooltip.tt-top:after, .tooltip.tt-bottom:after {
+    border-width: 10px;
+    z-index: 1;
+}
+.tooltip.tt-bottom:before, .tooltip.tt-bottom:after {
+    transform: translate(-50%, -100%);
+    top: 0;
+}
+.tooltip.tt-top:before, .tooltip.tt-top:after {
+    transform: translate(-50%, 100%);
+    bottom: 0;
+}
+.tooltip.tt-arrow--left:before, .tooltip.tt-arrow--left:after {
+    left: 30px;
+}
+.tooltip.tt-arrow--center:before, .tooltip.tt-arrow--center:after {
+    left: 50%;
+}
+.tooltip.tt-arrow--right:before, .tooltip.tt-arrow--right:after {
+    left: calc(100% - 30px);
+}
+.tooltip.tt-theme-white {
+    background: white;
+    color: black;
+    box-shadow: 0 0 40px 1px black;
+    border: 1px solid #eee;
+}
+.tooltip.tt-theme-white.tt-top:before {
+    border-top-color: #fff;
+}
+.tooltip.tt-theme-white.tt-top:after {
+    border-top-color: #eee;
+}
+.tooltip.tt-theme-white.tt-bottom:before {
+    border-bottom-color: #fff;
+}
+.tooltip.tt-theme-white.tt-bottom:after {
+    border-bottom-color: #eee;
+}
+.tooltip.tt-theme-black {
+    background: #22242c;
+    color: white;
+    border: 1px solid #444;
+}
+.tooltip.tt-theme-black.tt-top:before {
+    border-top-color: #333;
+}
+.tooltip.tt-theme-black.tt-top:after {
+    border-top-color: #444;
+}
+.tooltip.tt-theme-black.tt-bottom:before {
+    border-bottom-color: #22242c;
+}
+.tooltip.tt-theme-black.tt-bottom:after {
+    border-bottom-color: #444;
+}
+.tooltip_template {
+    display: none;
+}

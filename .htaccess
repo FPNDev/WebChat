@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !^/favicon.ico$
+RewriteCond %{REQUEST_URI} !^/assets/.*$
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|png|gif|wav|mp3)$
+RewriteCond %{REQUEST_URI} !^/storage/uploads/.*$
+RewriteRule . index.php
